@@ -16,6 +16,20 @@ publishing {
 }
 
 buildscript {
+    repositories {
+        maven { url 'https://jitpack.io' }
+    }
+    dependencies {
+        classpath 'com.github.Kingsmlin249:ShadowHelper:1.2.0'
+    }
+}
+
+apply plugin: 'com.github.dcendents.jitpack'
+
+version = '1.0.0' // 设置项目版本号
+
+
+buildscript {
     
     repositories {
         google()
