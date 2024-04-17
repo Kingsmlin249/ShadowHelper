@@ -1,5 +1,19 @@
 apply plugin: 'com.android.application'
+plugins {
+    id 'cn.Kingsmlin249.ShadowHelper'
+}
 
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId 'cn.Kingsmlin249'
+            artifactId 'ShadowHelper'
+            version '1.0.0'
+
+            from components.java
+        }
+    }
+}
 android {
     compileSdkVersion 26
     defaultConfig {
